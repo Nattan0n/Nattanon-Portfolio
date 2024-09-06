@@ -1,0 +1,675 @@
+/* css main */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    position: relative; /* ให้ตำแหน่งเป็น relative เพื่อวางพื้นหลังที่ fixed ได้ */
+}
+
+.background-fixed {
+    position: fixed; /* ฟิกให้พื้นหลังคงที่ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2)); /* หรือ background image ที่คุณใช้ */
+    z-index: -1; /* ให้แน่ใจว่าพื้นหลังอยู่ด้านหลังของเนื้อหา */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* ส่วนที่เหลือของ CSS */
+.body {
+    align-items: center;
+    justify-content: center;
+    margin-inline: 10%;
+}
+
+/* CSS สำหรับ header */
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: -webkit-sticky; /* สำหรับ Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.header.sticky {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-inline: 10%;
+    margin-inline: -10vw;
+    transition: background-color 0.3s ease, padding-inline 0.3s ease, margin-inline 0.3s ease;
+    box-shadow: 0px 0px 50px 5px #000000;
+    border-bottom: none;
+}
+
+/* ส่วนที่เหลือของ CSS ต่อไป */
+
+
+/* ส่วนที่เหลือของ CSS */
+
+
+.header__style--text {
+    padding-top: 59px;
+    padding-bottom: 50px;
+}
+.header__style--text.sticky  {
+    padding-block: 20px;
+}
+
+.text {
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.text__margin-left {
+    margin-left: 75px;
+    cursor: pointer;
+}
+
+a:hover:not(.active) {
+    color: #FFF27C;
+    text-shadow: 10px 10px 40px #FFF27C;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+a {
+    transition: text-shadow 0.3s ease;
+    text-decoration:none; 
+}
+
+.container__00 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-block: 20px;
+}
+
+.icon {
+    width: 100px;  
+    height: 100px; 
+    object-fit: contain; /* ทำให้รูปปรับขนาดภายในกล่อง */
+    transition: filter 0.3s ease, transform 0.3s ease; /* เพิ่ม transform transition */
+}
+
+.icon:hover {
+    filter: drop-shadow(0px 0px 20px #FFF27C);
+    transform: scale(1.3); /* ขยายขนาดเมื่อ hover */
+}
+
+.text__content {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90px;
+    padding-top: 10%;
+    z-index: 1;
+}
+
+.photo__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 381px;
+    height: 551px;
+    transition: transform 0.5s ease;
+}
+
+.photo__container__00,
+.photo__container__01,
+.photo__style {
+    position: absolute; /* ทำให้องค์ประกอบภายในเป็น absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* ใช้ความกว้างของ container */
+    height: 100%; /* ใช้ความสูงของ container */
+    border-radius: 50px; /* ใช้ border-radius เดียวกัน */
+    background-size: cover; /* ทำให้ภาพครอบคลุมทั้งพื้นที่ */
+    background-position: center; /* จัดให้ภาพอยู่ตรงกลาง */
+}
+
+.imgPNG__style01 {
+    width: 100%; /* กำหนดความกว้างให้เต็มพื้นที่ */
+    height: auto; /* กำหนดความสูงให้สัมพันธ์กับความกว้าง */
+    position: relative; /* ทำให้การกำหนดตำแหน่งเป็น relative */
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกมาจาก container */
+    top: 0;
+    left: -13%;
+    
+}
+.imgPNG__style02 {
+    width: 100%; /* กำหนดความกว้างให้เต็มพื้นที่ */
+    height: auto; /* กำหนดความสูงให้สัมพันธ์กับความกว้าง */
+    position: relative; /* ทำให้การกำหนดตำแหน่งเป็น relative */
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกมาจาก container */
+    top: 0;
+    left: 13%;
+    
+}
+.Link-img{
+    display: flex;
+    justify-content: flex-end; /* ชิดขวา */
+}
+
+.imgPNG__style01 img,
+.imgPNG__style02 img {
+    width: 80%; /* กำหนดความกว้างของภาพให้เต็มพื้นที่ container */
+    height: auto; /* กำหนดความสูงให้สัมพันธ์กับความกว้าง */
+    object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่ */
+}
+
+
+
+.img-fit01 {
+    box-shadow: rgba(0, 0, 0, 0.45) -55px 50px 30px -30px;
+    margin-bottom: 50px;
+}
+.img-fit02 {
+    box-shadow: rgba(0, 0, 0, 0.45) 55px 50px 30px -30px;
+    margin-bottom: 50px;
+}
+
+
+.photo__container__00 {
+    background: linear-gradient(0deg, rgba(88, 86, 163, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%),
+                linear-gradient(180deg, #FFF96D 0%, rgba(0, 0, 0, 0.00) 100%);
+    transform: rotate(-10.626deg);
+    top: -40px; /* ขยับลง */
+    left: -50px; /* ขยับไปทางซ้าย */
+    z-index: 1; /* อยู่ล่างสุด */
+    transition: transform 0.5s ease; /* เพิ่ม transition */
+}
+
+.photo__container__01 {
+    background: linear-gradient(0deg, rgba(31, 29, 138, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%),
+                linear-gradient(180deg, #00CC99 0%, rgba(0, 0, 0, 0.00) 100%);
+    transform: rotate(-164.011deg);
+    top: 35px; /* ขยับขึ้น */
+    left: 60px; /* ขยับไปทางขวา */
+    z-index: 2; /* อยู่เหนือ photo__container__00 */
+    transition: transform 0.5s ease; /* เพิ่ม transition */
+}
+
+.photo__style {
+    background: url('img/nattanon_0.png') center / cover no-repeat;
+    box-shadow: 0px 0px 19px -3px #000;
+    z-index: 3; /* อยู่บนสุด */
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* เพิ่ม transition */
+}
+
+.photo__style:hover {
+    box-shadow: 0px 0px 19px -3px #cecece;
+    border-radius: 50px;
+}
+
+.col-2 {
+    margin-bottom: 200px;
+}
+
+.button__style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 413px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF27C;
+    margin-top: 90px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button__style:hover:not(.active) {
+    cursor: pointer;
+    box-shadow: 0px 0px 100px 10px #FFF27C;
+    transform: scale(1.1);
+}
+
+.btn__text--style {
+    text-align: center;
+    color: #000;
+}
+
+.box-photo__container {
+    padding-right: 8%; 
+    padding-top: 10%;
+}
+
+.container__01 {
+    text-align: center;
+    width: 100%;
+}
+
+.text__head_about, .text__head_skill, .text__head_experience, .text__head_contact {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90px;
+    margin: 100px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.icon_skill {
+    border: 0 solid #000;
+    background-color: #313131;
+    border-radius: 50px;
+    padding-bottom: 40px;
+}
+
+.box-container {
+    background-color: rgba(255, 255, 255, 0.3);    
+    backdrop-filter: blur(40px);
+    border-radius: 50px;
+}
+
+.text__content_about {
+    color: #ffffff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    padding-inline: 50px;
+    padding-bottom: 50px;
+}
+
+.text__content_skills {
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100px;
+}
+
+.text__content_experience {
+    color: #ffffff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    padding-inline: 50px;
+    padding-bottom: 50px;
+}
+
+button#scrollButton {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.3);    
+    box-shadow: 0px 0px 100px 1px #000000;
+    backdrop-filter: blur(40px);
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button#scrollButton:hover {
+    background-color: #FFF96D;
+    box-shadow: 0px 0px 100px 10px #FFF27C;
+    transform: scale(1.3);
+}
+
+.bi {
+    font-size: 30px; /* ปรับขนาด icon ปุ่มกลับ home */
+}
+
+footer {
+    background: #313131;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+.header__menu-slide {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    display: flex;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 9;
+}
+
+.header__menu-slide.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.header__menu-slide.close {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.header__menu-slide a {
+    padding: 15px 20px; /* เพิ่ม padding ให้เมนู */
+    color: white;
+    text-align: left; /* จัดเรียงข้อความด้านซ้าย */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    display: block; /* ให้แต่ละลิงก์แสดงเป็นบล็อก */
+}
+
+.header__menu-slide a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+.header__menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.1s ease; /* เพิ่ม transition ที่ต้องการ */
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+.box-icon{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    padding-bottom: 5%; 
+    max-width: 50%; 
+    margin: 0 auto;
+}
+/* Contact Section CSS */
+.head_contact {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.contact__info {
+    color: #FFF;
+    font-size: 25px;
+    line-height: 40px;
+    padding-inline: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact__info a {
+    color: #FFF27C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact__info a:hover {
+    color: #FFF;
+    text-shadow: 0px 0px 10px #FFF27C;
+}
+
+.contact__form {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact__content {
+    padding-block: 5rem;
+}
+
+.contact__form label {
+    display: block;
+    color: #FFF;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFF;
+    font-size: 26px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact__form input[type="text"]:focus,
+.contact__form input[type="email"]:focus,
+.contact__form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact__form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFF27C;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact__form button[type="submit"]:hover {
+    background-color: #FFF27C;
+    transform: scale(1.05);
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .text__margin-left {
+        margin-left: 0px;
+    }
+    .text__content {
+        font-size: 40px;
+        line-height: 70px;
+    }
+    .photo__style {
+        width: 300px;
+        height: 450px;
+    }
+    .photo__container__00,
+    .photo__container__01 {
+        width: 300px;
+        height: 450px;
+    }
+    .container__00{
+        display: block;
+    }
+    .box-photo__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 25%;
+    }
+    .button__style{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__menu-icon {
+        display: flex;
+        align-items: center; 
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header__menu-slide.show {
+        display: flex;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .body{
+        margin-inline: 10%;
+    }
+    .col-3{
+        margin: 10px 10px 0 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .text__content {
+        font-size: 40px;
+        line-height: 70px;
+    }
+    .button__style{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header__menu-slide.show {
+        display: flex;
+    }
+    .header {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .text__content {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .photo__style {
+        width: 350px;
+        height: 450px;
+    }
+    .photo__container__00,
+    .photo__container__01 {
+        width: 350px;
+        height: 450px;
+    }
+    .box-photo__container{
+        padding-left: 0;
+    }
+    .box-container{
+        border-radius: 25px;
+    }
+    .text__head_about{
+        margin: 0;
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text__content {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .photo__style {
+        width: 250px;
+        height: 350px;
+    }
+    .photo__container__00,
+    .photo__container__01 {
+        width: 250px;
+        height: 350px;
+    }
+    .button__style {
+        width: 100%;
+        height: 70px;
+        margin-top: 100px;
+    }
+    .box-photo__container{
+        padding: 0;
+    }
+    .header__style--text {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .btn__text--style{
+        font-size: 40px;
+        line-height: 70px;
+    }
+    .header__menu-slide{
+        max-width: 80%;
+    }
+    .text__content_about {
+        color: #ffffff;
+        font-size: 20px; /* ปรับขนาดฟอนต์ */
+        font-style: normal;
+        font-weight: 400; /* ปรับความหนาฟอนต์ */
+        line-height: 1.4; /* ปรับระยะห่างระหว่างบรรทัด */
+        padding: 20px; /* เพิ่มการเว้นวรรคทั้งด้านในและด้านล่าง */
+        text-align: justify; /* จัดข้อความให้ทั้งสองข้างเท่ากัน */
+        letter-spacing: 0.5px; /* เพิ่มการเว้นวรรคระหว่างตัวอักษร */
+        word-spacing: 1px; /* เพิ่มการเว้นวรรคระหว่างคำ */
+    }
+    .text__head_skill{
+        margin: 0;
+        padding-top: 100px;
+    }
+    .photo__container__00,
+    .photo__container__01,
+    .photo__style {
+        position: absolute; /* เปลี่ยนจาก absolute เป็น static */
+        top: auto;
+        left: auto;
+        border-radius: 50px; 
+        background-size: cover; 
+        background-position: center; 
+    }
+    .box-icon{
+        display: block; 
+        padding-bottom: 5%; 
+        max-width: 100%; 
+    }
+    body {
+        background-image: url('./img/backgroud/blurry-gradient-haikei05.svg');
+    }
+    .imgPNG__style01,
+    .imgPNG__style02{
+        display: none
+    }
+}

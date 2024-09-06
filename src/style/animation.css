@@ -1,0 +1,66 @@
+/* Animation.css */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float-hover {
+  0% {
+    transform: translateY(0) scale(1.05);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1.05);
+  }
+}
+
+.photo__style,
+.photo__container {
+  animation: float 2s ease-in-out infinite;
+}
+.photo__style:hover,
+.photo__container:hover {
+  animation: float-hover 2s ease-in-out infinite;
+}
+
+/* bounce-i */
+@keyframes bounce-in {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.bounce-in {
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  transform: scale(0);
+  opacity: 0;
+}
+.bounce-in.visible2 {
+  transform: scale(1);
+  opacity: 1;
+}
