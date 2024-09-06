@@ -11,7 +11,7 @@ class Content01 extends Component {
 
     if (!element._typed) { // ตรวจสอบว่ามีการสร้าง Typed.js แล้วหรือไม่
       const options = {
-        strings: ['Computer Science', 'Front-End Developer'],
+        strings: ['Computer Science', 'Front-end Developer'],
         typeSpeed: 100,
         backSpeed: 60,
         backDelay: 1000,

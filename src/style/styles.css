@@ -7,9 +7,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    position: relative; /* ให้ตำแหน่งเป็น relative เพื่อวางพื้นหลังที่ fixed ได้ */
 }
-
+  
 .background-fixed {
     position: fixed; /* ฟิกให้พื้นหลังคงที่ */
     top: 0;
