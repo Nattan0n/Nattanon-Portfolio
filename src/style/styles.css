@@ -59,8 +59,8 @@ body {
 
 
 .header__style--text {
-    padding-top: 59px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .header__style--text.sticky  {
     padding-block: 20px;

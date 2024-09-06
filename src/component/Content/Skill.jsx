@@ -18,29 +18,29 @@ class Skills extends Component {
   render() {
     return (
       <div>
-        <div className="container__00 head_skill">
+        <div className="container__00 head_skill fade-in">
           <div className="container__01">
             <h1 className="text__head_skill">Skills</h1>
             <div className="box-container">
               
-              <h1 className="text__content_skills">Front-End</h1>
-              <div className="box-icon">
+              <h1 className="text__content_skills bounce-in">Front-End</h1>
+              <div className="box-icon bounce-in">
                 <img alt="HTML" className="icon" src={HTML} />
                 <img alt="CSS" className="icon" src={CSS} />
                 <img alt="JavaScript" className="icon" src={JavaScript} />
                 <img alt="React"className="icon" src={ReactJs} style={{ backgroundColor: 'white', borderRadius: '50%' }} />
               </div>
 
-              <h1 className="text__content_skills">Back-End</h1>
-              <div className="box-icon">
+              <h1 className="text__content_skills bounce-in">Back-End</h1>
+              <div className="box-icon bounce-in">
                 <img alt="PHP" className="icon" src={PHP} />
                 <img alt="MySQL" className="icon" src={MySQL} style={{ backgroundColor: 'white', borderRadius: '50%' }} />
                 <img alt="Java" className="icon" src={Java} style={{ backgroundColor: 'white', borderRadius: '50%' }} />
                 <img alt="Python" className="icon" src={Python} />
               </div>
 
-              <h1 className="text__content_skills">Other</h1>
-              <div className="box-icon">
+              <h1 className="text__content_skills bounce-in">Other</h1>
+              <div className="box-icon bounce-in">
                 <img alt="Figma" className="icon" src={Figma} />
                 <img alt="XAMPP" className="icon" src={XAMPP} />
                 <img alt="GitHub" className="icon" src={GitHub} />

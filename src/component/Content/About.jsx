@@ -3,7 +3,7 @@ import { Component } from 'react';
 class About extends Component {
   render() {
     return (
-      <div>
+      <div className='fade-in'>
         <div className="container__00 head_about">
           <div className="container__01">
             <h1 className="text__head_about">About</h1>

@@ -8,36 +8,36 @@ class Header extends Component {
     this.state = {
       menuOpen: false
     };
-    this.handleScroll = this.handleScroll.bind(this);
+    // this.handleScroll = this.handleScroll.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('scroll', this.handleScroll);
     document.addEventListener('click', this.handleMenuClick);
-    this.handleScroll(); // initial check
+    // this.handleScroll(); 
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    // window.removeEventListener('scroll', this.handleScroll);
     document.removeEventListener('click', this.handleMenuClick);
   }
 
-  handleScroll() {
-    const header = document.querySelector('.header');
-    const headerText = document.querySelector('.header__style--text');
-    const scrollY = window.scrollY;
+  // handleScroll() {
+  //   const header = document.querySelector('.header');
+  //   const headerText = document.querySelector('.header__style--text');
+  //   const scrollY = window.scrollY;
 
-    if (scrollY > 10) {
-      header.classList.add('sticky');
-      headerText.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-      headerText.classList.remove('sticky');
-    }
-  }
+  //   if (scrollY > 10) {
+  //     header.classList.add('sticky');
+  //     headerText.classList.add('sticky');
+  //   } else {
+  //     header.classList.remove('sticky');
+  //     headerText.classList.remove('sticky');
+  //   }
+  // }
 
   toggleMenu() {
     this.setState((prevState) => ({ menuOpen: !prevState.menuOpen }));
@@ -94,7 +94,7 @@ class Header extends Component {
   render() {
     const { menuOpen } = this.state;
     return (
-      <header className="header">
+      <header className="header sticky">
         <div className="header__style--text text">
           <a className="text__padding-right">Nattanon</a>
         </div>

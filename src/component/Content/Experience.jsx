@@ -6,7 +6,7 @@ class Experience extends Component {
   render() {
     return (
       <div>
-        <div className="container__00 head_experience">
+        <div className="container__00 head_experience fade-in">
           <div className="container__01">
             <h1 
               className="text__head_experience" 
@@ -18,7 +18,7 @@ class Experience extends Component {
         </div>
 
         <div className="container__00 col-1">
-          <div className="imgPNG__style01">
+          <div className="imgPNG__style01 fade-in">
             <div target="_blank" rel="noopener noreferrer">
               <img 
                 src={MC16ProR}
@@ -28,7 +28,7 @@ class Experience extends Component {
             </div>
           </div>            
 
-          <h1 className="text__content_experience">
+          <h1 className="text__content_experience bounce-in">
             HiddenGem
             <p>2023-2024 | 4 Months</p>
             <a href="https://nightlife.run" target="_blank" rel="noopener noreferrer">
@@ -40,7 +40,7 @@ class Experience extends Component {
         </div>
 
         <div className="container__00 col-1" style={{ marginTop: '20%' }}>
-          <h1 className="text__content_experience">
+          <h1 className="text__content_experience bounce-in">
             Job description
             <ul>
               <li>Worked as a front-end developer</li>
@@ -49,7 +49,7 @@ class Experience extends Component {
             </ul>
           </h1>
           
-          <div className="imgPNG__style02">
+          <div className="imgPNG__style02 fade-in">
             <div className="Link-img" target="_blank" rel="noopener noreferrer">
               <img 
                 src={MC16ProL}

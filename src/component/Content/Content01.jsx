@@ -13,9 +13,9 @@ class Content01 extends Component {
     
     return (
       <div>
-        <div className="container__00 col-1">
+        <div className="container__00 col-1 fade-in">
           <h1 className="text__content" dangerouslySetInnerHTML={{ __html: labelTextContent }} />
-          <div className="box-photo__container">
+          <div className="box-photo__container bounce-in">
             <div className="photo__container">
               <div className="photo__container__00"></div>
               <div className="photo__container__01"></div>
