@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Page from './component/Page/Page';
 
 class App extends Component {
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div>
         <Page />
+        <SpeedInsights />
       </div>
     );
   }
