@@ -33,7 +33,7 @@ class Content01 extends Component {
     `;
     
     return (
-      <div>
+      <div style={{marginTop: '5rem'}}>
         <div className="container__00 col-1 fade-in">
           <h1 className="text__content" dangerouslySetInnerHTML={{ __html: labelTextContent }} />
           <div className="box-photo__container bounce-in">
