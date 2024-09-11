@@ -1,16 +1,16 @@
 // App.jsx
 
-import { Component } from 'react';
+import { Component } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import Page from './component/Page/Page';
-import Loading from './component/Loading/Loading';
-import BgGradient from './component/Bg-gradient/Bg-gradient';
+import Page from "./component/Page/Page";
+import Loading from "./component/Loading/Loading";
+import BgGradient from "./component/Bg-gradient/Bg-gradient";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: true,
     };
   }
 
